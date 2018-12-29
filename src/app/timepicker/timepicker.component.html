@@ -1,0 +1,25 @@
+<ngb-timepicker [(ngModel)]="time"></ngb-timepicker>
+<hr>
+<pre>Selected time: {{time | json}}</pre>
+
+<ngb-timepicker [(ngModel)]="time" [meridian]="meridian"></ngb-timepicker>
+<button class="btn btn-sm btn-outline-{{meridian ? 'success' : 'danger'}}" (click)="toggleMeridian()">
+  Meridian - {{meridian ? "ON" : "OFF"}}
+</button>
+<hr>
+<pre>Selected time: {{time | json}}</pre>
+
+<ngb-timepicker [(ngModel)]="times" [seconds]="seconds"></ngb-timepicker>
+<button class="btn btn-sm btn-outline-{{seconds ? 'success' : 'danger'}}" (click)="toggleSeconds()">
+  Seconds - {{seconds ? "ON" : "OFF"}}
+</button>
+<hr>
+<pre>Selected time: {{times | json}}</pre>
+
+<ngb-timepicker [(ngModel)]="timespinner" [spinners]="spinners"></ngb-timepicker>
+
+<hr />
+
+<button class="m-t-1 btn btn-sm btn-outline-{{spinners ? 'success' : 'danger'}}" (click)="toggleSpinners()">
+  Spinners - {{spinners ? "ON" : "OFF"}}
+</button>
